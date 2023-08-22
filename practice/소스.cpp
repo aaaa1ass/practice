@@ -1,12 +1,16 @@
+//문자열 반복해서 출력하기
 #include <iostream>
-//a와 b 출력하기
+#include <string>
+
 using namespace std;
 
 int main(void) {
-    int a;
-    int b;
-    cin >> a >> b;
-    cout << "a = " << a << endl;
-    cout << "b = " << b << endl;
+    string str;
+    int n;
+    cin >> str >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cout << str;
+    }
     return 0;
 }
