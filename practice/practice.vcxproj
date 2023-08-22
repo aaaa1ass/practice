@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="a와 b 출력하기.h" />
+    <ClInclude Include="문자열 반복해서 출력하기.h" />
     <ClInclude Include="문자열 출력하기.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

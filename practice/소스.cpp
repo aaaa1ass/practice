@@ -1,4 +1,4 @@
-//문자열 반복해서 출력하기
+//대소문자 바꿔서 출력하기
 #include <iostream>
 #include <string>
 
@@ -6,11 +6,13 @@ using namespace std;
 
 int main(void) {
     string str;
-    int n;
-    cin >> str >> n;
-    for (int i = 0; i < n; i++)
+    cin >> str;
+    for (int i = 0; i < str.size(); i++)
     {
-        cout << str;
+        if ('a' <= str[i] && str[i] <= 'z')
+            cout << (char)(str[i] - 32);
+        else
+            cout << (char)(str[i] + 32);
     }
     return 0;
 }

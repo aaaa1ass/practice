@@ -26,5 +26,8 @@
     <ClInclude Include="a와 b 출력하기.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="문자열 반복해서 출력하기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
