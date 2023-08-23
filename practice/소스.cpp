@@ -1,18 +1,13 @@
-//홀짝 구분하기
-#include <iostream>
+//문자열 겹쳐쓰기
+#include <string>
+#include <vector>
 
 using namespace std;
 
-int main(void) {
-    int n;
-    cin >> n;
-    if (n % 2 == 0)
+string solution(string my_string, string overwrite_string, int s) {
+    for (int i = s; i < s + overwrite_string.size(); i++)
     {
-        cout << n << " is even";
+        my_string[i] = overwrite_string[i - s];
     }
-    else
-    {
-        cout << n << " is odd";
-    }
-    return 0;
+    return my_string;
 }
