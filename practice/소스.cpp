@@ -1,15 +1,18 @@
-//문자열 돌리기
+//홀짝 구분하기
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main(void) {
-    string str;
-    cin >> str;
-    for (int i = 0; i < str.size(); i++)
+    int n;
+    cin >> n;
+    if (n % 2 == 0)
     {
-        cout << str[i] << endl;
+        cout << n << " is even";
+    }
+    else
+    {
+        cout << n << " is odd";
     }
     return 0;
 }
