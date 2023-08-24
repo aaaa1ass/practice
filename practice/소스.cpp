@@ -1,25 +1,21 @@
-//문자열 섞기
+//문자 리스트를 문자열로 변환하기
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-string solution(string str1, string str2) {
-    string answer;
-
-    for (int i = 0; i < str1.length(); i++)
+string solution(vector<string> arr) {
+    string answer = "";
+    for (int i = 0; i < arr.size(); i++)
     {
-        answer += str1[i];
-        answer += str2[i];
+        answer += arr[i];
     }
-
     return answer;
 }
 
 int main() 
 {
-    solution("aaaaa", "bbbbb");
 
     return 0;
 }
