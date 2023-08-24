@@ -1,4 +1,4 @@
-//더 크게 합치기
+//두 수의 연산값 비교하기
 #include <iostream>
 #include <string>
 
@@ -25,12 +25,11 @@ int function(int a, int b)
 }
 
 int solution(int a, int b) {
-    int ab = function(a, b);
-    int ba = function(b, a);
+    int ab = function(b, a);
     
-    if (ab > ba)
+    if (ab > 2 * a * b)
         return ab;
-    return ba;
+    return 2 * a * b;
 }
 
 int main() 
