@@ -1,21 +1,20 @@
-//문자 리스트를 문자열로 변환하기
+//문자열 곱하기
 #include <iostream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
-string solution(vector<string> arr) {
+string solution(string my_string, int k) {
     string answer = "";
-    for (int i = 0; i < arr.size(); i++)
+    for (int i = 0; i < k; i++)
     {
-        answer += arr[i];
+        answer += my_string;
     }
     return answer;
 }
 
 int main() 
 {
-
+    cout << solution("Hello", 3);
     return 0;
 }
