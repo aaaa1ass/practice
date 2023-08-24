@@ -1,20 +1,40 @@
-//문자열 곱하기
+//더 크게 합치기
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-string solution(string my_string, int k) {
-    string answer = "";
-    for (int i = 0; i < k; i++)
+int function(int a, int b)
+{
+    if (a >= 1000)
     {
-        answer += my_string;
+        return b * 10000 + a;
     }
-    return answer;
+    else if (a >= 100)
+    {
+        return b * 1000 + a;
+    }
+    else if (a >= 10)
+    {
+        return b * 100 + a;
+    }
+    else
+    {
+        return b * 10 + a;
+    }
+}
+
+int solution(int a, int b) {
+    int ab = function(a, b);
+    int ba = function(b, a);
+    
+    if (ab > ba)
+        return ab;
+    return ba;
 }
 
 int main() 
 {
-    cout << solution("Hello", 3);
+    cout << solution(89, 8);
     return 0;
 }
