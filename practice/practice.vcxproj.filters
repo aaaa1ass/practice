@@ -47,5 +47,8 @@
     <ClInclude Include="홀짝 구분하기.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="문자열 겹쳐쓰기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

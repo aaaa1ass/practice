@@ -1,13 +1,25 @@
-//문자열 겹쳐쓰기
+//문자열 섞기
+#include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-string solution(string my_string, string overwrite_string, int s) {
-    for (int i = s; i < s + overwrite_string.size(); i++)
+string solution(string str1, string str2) {
+    string answer;
+
+    for (int i = 0; i < str1.length(); i++)
     {
-        my_string[i] = overwrite_string[i - s];
+        answer += str1[i];
+        answer += str2[i];
     }
-    return my_string;
+
+    return answer;
+}
+
+int main() 
+{
+    solution("aaaaa", "bbbbb");
+
+    return 0;
 }
