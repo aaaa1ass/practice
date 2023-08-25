@@ -1,23 +1,48 @@
-//flag에 따라 다른 값 반환하기
+//추억 점수
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
-int solution(int a, int b, bool flag) {
-    int answer = 0;
-    if (flag == true)
+vector<int> solution(vector<string> name, vector<int> yearning, vector<vector<string>> photo) {
+    vector<int> answer;
+    for (int i = 0; i < photo.size(); i++)
     {
-        answer = a + b;
-    }
-    else
-    {
-        answer = a - b;
+        int sum = 0;
+        for (int j = 0; j < photo[i].size(); j++)
+        {
+            bool isin = false;
+            int index = 0;
+            for (int k = 0; k < name.size(); k++)
+            {
+                if (name[k] == photo[i][j])
+                {
+                    index = k;
+                    isin = true;
+                    break;
+                }
+            }
+            if (isin == true)
+            {
+                sum += yearning[index];
+            }
+        }
+        answer.push_back(sum);
     }
     return answer;
 }
 
 int main() 
-{
-    cout << solution(10,5,true);
+{   
+    vector<string> name = { "may", "kein", "kain", "radi" };
+    vector<int> yearning = { 5, 10, 1, 3 };
+    vector<vector<string>> photo = { {"may", "kein", "kain", "radi"} ,{"may", "kein", "brin", "deny"},{"kon", "kain", "may", "coni"} };
+    
+    vector<int> s = solution(name, yearning, photo);
+    for (int i = 0; i < s.size(); i++)
+    {
+        cout << s[i]<<' ';
+    }
     return 0;
 }
