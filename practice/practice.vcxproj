@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="a와 b 출력하기.h" />
     <ClInclude Include="n의 배수.h" />
+    <ClInclude Include="공배수.h" />
     <ClInclude Include="대소문자 바꿔서 출력하기.h" />
     <ClInclude Include="더 크게 합치기.h" />
     <ClInclude Include="덧셈식 출력하기.h" />
