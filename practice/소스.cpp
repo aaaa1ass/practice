@@ -1,35 +1,17 @@
-//두 수의 연산값 비교하기
+//n의 배수
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-int function(int a, int b)
-{
-    if (a >= 1000)
-    {
-        return b * 10000 + a;
-    }
-    else if (a >= 100)
-    {
-        return b * 1000 + a;
-    }
-    else if (a >= 10)
-    {
-        return b * 100 + a;
-    }
+int solution(int num, int n) {
+    int answer = 0;
+    if (num % n == 0)
+        answer = 1;
     else
-    {
-        return b * 10 + a;
-    }
-}
+        answer = 0;
 
-int solution(int a, int b) {
-    int ab = function(b, a);
-    
-    if (ab > 2 * a * b)
-        return ab;
-    return 2 * a * b;
+    return answer;
 }
 
 int main() 

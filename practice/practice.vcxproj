@@ -134,6 +134,7 @@
     <ClInclude Include="대소문자 바꿔서 출력하기.h" />
     <ClInclude Include="더 크게 합치기.h" />
     <ClInclude Include="덧셈식 출력하기.h" />
+    <ClInclude Include="두 수의 연산값 비교하기.h" />
     <ClInclude Include="문자 리스트를 문자열로 변환하기.h" />
     <ClInclude Include="문자열 겹쳐쓰기.h" />
     <ClInclude Include="문자열 곱하기.h" />
