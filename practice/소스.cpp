@@ -1,49 +1,23 @@
-//조건 문자열
+//flag에 따라 다른 값 반환하기
 #include <iostream>
 
 using namespace std;
 
-int solution(string ineq, string eq, int n, int m) {
+int solution(int a, int b, bool flag) {
     int answer = 0;
-    if (ineq == ">")
+    if (flag == true)
     {
-        if (eq == "=")
-        {
-            if (n >= m)
-                answer = 1;
-            else
-                answer = 0;
-        }
-        else
-        {
-            if (n > m)
-                answer = 1;
-            else
-                answer = 0;
-        }
+        answer = a + b;
     }
     else
     {
-        if (eq == "=")
-        {
-            if (n <= m)
-                answer = 1;
-            else
-                answer = 0;
-        }
-        else
-        {
-            if (n < m)
-                answer = 1;
-            else
-                answer = 0;
-        }
+        answer = a - b;
     }
     return answer;
 }
 
 int main() 
 {
-    cout << solution("<","=",20,50);
+    cout << solution(10,5,true);
     return 0;
 }
