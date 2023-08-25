@@ -1,22 +1,42 @@
-//홀짝에 따라 다른 값 반환하기
+//조건 문자열
 #include <iostream>
 
 using namespace std;
 
-int solution(int n) {
+int solution(string ineq, string eq, int n, int m) {
     int answer = 0;
-    if (n % 2 != 0)
+    if (ineq == ">")
     {
-        for (int i = 1; i <= n; i += 2)
+        if (eq == "=")
         {
-            answer += i;
+            if (n >= m)
+                answer = 1;
+            else
+                answer = 0;
+        }
+        else
+        {
+            if (n > m)
+                answer = 1;
+            else
+                answer = 0;
         }
     }
     else
     {
-        for (int i = 2; i <= n; i += 2)
+        if (eq == "=")
         {
-            answer += i * i;
+            if (n <= m)
+                answer = 1;
+            else
+                answer = 0;
+        }
+        else
+        {
+            if (n < m)
+                answer = 1;
+            else
+                answer = 0;
         }
     }
     return answer;
@@ -24,6 +44,6 @@ int solution(int n) {
 
 int main() 
 {
-    cout << solution(89);
+    cout << solution("<","=",20,50);
     return 0;
 }
