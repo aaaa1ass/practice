@@ -86,5 +86,8 @@
     <ClInclude Include="코드 처리하기.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="등차수열의 특정한 항만 더하기.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
