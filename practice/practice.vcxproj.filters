@@ -92,5 +92,8 @@
     <ClInclude Include="주사위 게임 2.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="원소들의 곱과 합.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

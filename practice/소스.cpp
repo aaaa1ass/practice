@@ -1,4 +1,4 @@
-//원소들의 곱과 합
+//이어 붙인 수
 #include <iostream>
 #include <vector>
 #include <string>
@@ -7,22 +7,20 @@ using namespace std;
 
 int solution(vector<int> num_list) {
     int answer = 0;
-    int times = 1;
-    int sum = 0;
+    int even = 0;
+    int odd = 0;
     for (int i = 0; i < num_list.size(); i++)
     {
-        times *= num_list[i];
-        sum += num_list[i];
+        if (num_list[i] % 2 == 0)
+        {
+            even = even * 10 + num_list[i];
+        }
+        else
+        {
+            odd = odd * 10 + num_list[i];
+        }
     }
-    if (times < sum * sum)
-    {
-        answer = 1;
-    }
-    else
-    {
-        answer = 0;
-    }
-
+    answer = even + odd;
     return answer;
 }
 int main() 
