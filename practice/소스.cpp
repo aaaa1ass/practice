@@ -1,48 +1,46 @@
-//추억 점수
+//코드 처리하기
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
 
-vector<int> solution(vector<string> name, vector<int> yearning, vector<vector<string>> photo) {
-    vector<int> answer;
-    for (int i = 0; i < photo.size(); i++)
+string solution(string code) {
+    string answer = "";
+    int mode = 0;
+    for (int i = 0; i < code.length(); i++)
     {
-        int sum = 0;
-        for (int j = 0; j < photo[i].size(); j++)
+        if (code[i] == '1')
         {
-            bool isin = false;
-            int index = 0;
-            for (int k = 0; k < name.size(); k++)
+            if (mode == 0)
+                mode = 1;
+            else
+                mode = 0;
+        }
+        else
+        {
+            if (mode == 0)
             {
-                if (name[k] == photo[i][j])
+                if (i % 2 == 0)
                 {
-                    index = k;
-                    isin = true;
-                    break;
+                    answer += code[i];
                 }
             }
-            if (isin == true)
+            else
             {
-                sum += yearning[index];
+                if (i % 2 == 1)
+                {
+                    answer += code[i];
+                }
             }
         }
-        answer.push_back(sum);
     }
+    if (answer == "")
+        return "EMPTY";
     return answer;
 }
-
 int main() 
 {   
-    vector<string> name = { "may", "kein", "kain", "radi" };
-    vector<int> yearning = { 5, 10, 1, 3 };
-    vector<vector<string>> photo = { {"may", "kein", "kain", "radi"} ,{"may", "kein", "brin", "deny"},{"kon", "kain", "may", "coni"} };
-    
-    vector<int> s = solution(name, yearning, photo);
-    for (int i = 0; i < s.size(); i++)
-    {
-        cout << s[i]<<' ';
-    }
+    cout << solution("abc1abc1abc");
     return 0;
 }
