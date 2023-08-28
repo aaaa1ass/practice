@@ -1,46 +1,22 @@
-//코드 처리하기
+//등차수열의 특정한 항만 더하기
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
 
-string solution(string code) {
-    string answer = "";
-    int mode = 0;
-    for (int i = 0; i < code.length(); i++)
+int solution(int a, int d, vector<bool> included) {
+    int answer = 0;
+    for (int i = 0; i < included.size(); i++)
     {
-        if (code[i] == '1')
-        {
-            if (mode == 0)
-                mode = 1;
-            else
-                mode = 0;
-        }
-        else
-        {
-            if (mode == 0)
-            {
-                if (i % 2 == 0)
-                {
-                    answer += code[i];
-                }
-            }
-            else
-            {
-                if (i % 2 == 1)
-                {
-                    answer += code[i];
-                }
-            }
-        }
+        if (included[i] == true)
+            answer += a + i * d;
     }
-    if (answer == "")
-        return "EMPTY";
     return answer;
 }
 int main() 
 {   
-    cout << solution("abc1abc1abc");
+    vector<bool> v = { true,false,false,true,true };
+    cout << solution(3,4,v);
     return 0;
 }
