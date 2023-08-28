@@ -148,6 +148,7 @@
     <ClInclude Include="문자열 섞기.h" />
     <ClInclude Include="문자열 출력하기.h" />
     <ClInclude Include="조건 문자열.h" />
+    <ClInclude Include="주사위 게임 2.h" />
     <ClInclude Include="추억 점수.h" />
     <ClInclude Include="코드 처리하기.h" />
     <ClInclude Include="특수문자 출력하기.h" />

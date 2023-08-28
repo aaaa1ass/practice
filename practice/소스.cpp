@@ -1,28 +1,33 @@
-//주사위 게임 2
+//원소들의 곱과 합
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
 
-int solution(int a, int b, int c) {
+int solution(vector<int> num_list) {
     int answer = 0;
-    if (a != b && b != c)
+    int times = 1;
+    int sum = 0;
+    for (int i = 0; i < num_list.size(); i++)
     {
-        answer = a + b + c;
+        times *= num_list[i];
+        sum += num_list[i];
     }
-    else if (a == b && b == c)
+    if (times < sum * sum)
     {
-        answer = (a + b + c) * (a * a + b * b + c * c) * (a * a * a + b * b * b + c * c * c);
+        answer = 1;
     }
     else
     {
-        answer = (a + b + c) * (a * a + b * b + c * c);
+        answer = 0;
     }
+
     return answer;
 }
 int main() 
 {   
-    cout << solution(2,6,1);
+    vector<int> v = { 3, 4, 5, 2, 1 };
+    cout << solution(v);
     return 0;
 }
