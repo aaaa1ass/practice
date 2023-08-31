@@ -1,31 +1,27 @@
-//이어 붙인 수
+//마지막 두 원소
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-int solution(vector<int> num_list) {
-    int answer = 0;
-    int even = 0;
-    int odd = 0;
-    for (int i = 0; i < num_list.size(); i++)
+vector<int> solution(vector<int> num_list) {
+    if (num_list[num_list.size() - 1] > num_list[num_list.size() - 2])
     {
-        if (num_list[i] % 2 == 0)
-        {
-            even = even * 10 + num_list[i];
-        }
-        else
-        {
-            odd = odd * 10 + num_list[i];
-        }
+        num_list.push_back(num_list[num_list.size() - 1] - num_list[num_list.size() - 2]);
     }
-    answer = even + odd;
-    return answer;
+    else
+    {
+        num_list.push_back(num_list[num_list.size() - 1] * 2);
+    }
+    return num_list;
 }
+
+using namespace std;
+
 int main() 
 {   
-    vector<int> v = { 3, 4, 5, 2, 1 };
-    cout << solution(v);
+    vector<int> num_list = { 2, 1, 6 };
+    cout << solution(num_list)[3];
     return 0;
 }
