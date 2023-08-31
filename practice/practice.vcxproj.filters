@@ -104,5 +104,8 @@
     <ClInclude Include="수 조작하기 1.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="수 조작하기 2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
