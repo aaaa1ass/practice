@@ -1,27 +1,40 @@
-//마지막 두 원소
+//수 조작하기 1
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-vector<int> solution(vector<int> num_list) {
-    if (num_list[num_list.size() - 1] > num_list[num_list.size() - 2])
+int solution(int n, string control) {
+    int answer = n;
+    for (int i = 0; i < control.length(); i++)
     {
-        num_list.push_back(num_list[num_list.size() - 1] - num_list[num_list.size() - 2]);
+        if (control[i] == 'w')
+        {
+            answer += 1;
+        }
+        else if (control[i] == 's')
+        {
+            answer -= 1;
+        }
+        else if (control[i] == 'd')
+        {
+            answer += 10;
+        }
+        else
+        {
+            answer -= 10;
+        }
     }
-    else
-    {
-        num_list.push_back(num_list[num_list.size() - 1] * 2);
-    }
-    return num_list;
+
+    return answer;
 }
 
 using namespace std;
 
 int main() 
 {   
-    vector<int> num_list = { 2, 1, 6 };
-    cout << solution(num_list)[3];
+    string s = "wsdawsdassw";
+    cout << solution(0,s);
     return 0;
 }

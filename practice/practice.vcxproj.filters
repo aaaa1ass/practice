@@ -98,5 +98,8 @@
     <ClInclude Include="이어 붙인 수.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="마지막 두 원소.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
