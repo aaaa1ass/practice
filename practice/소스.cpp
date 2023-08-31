@@ -1,32 +1,32 @@
-//수 조작하기 1
+//수 조작하기 2
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-int solution(int n, string control) {
-    int answer = n;
-    for (int i = 0; i < control.length(); i++)
+string solution(vector<int> numLog) {
+    string answer = "";
+    for (int i = 1; i < numLog.size(); i++)
     {
-        if (control[i] == 'w')
+        int result = numLog[i] - numLog[i - 1];
+        if (result == 1)
         {
-            answer += 1;
+            answer += 'w';
         }
-        else if (control[i] == 's')
+        else if (result == -1)
         {
-            answer -= 1;
+            answer += 's';
         }
-        else if (control[i] == 'd')
+        else if (result == 10)
         {
-            answer += 10;
+            answer += 'd';
         }
-        else
+        else if (result == -10)
         {
-            answer -= 10;
+            answer += 'a';
         }
     }
-
     return answer;
 }
 
@@ -34,7 +34,7 @@ using namespace std;
 
 int main() 
 {   
-    string s = "wsdawsdassw";
-    cout << solution(0,s);
+    vector<int> s = { 0, 1, 0, 10, 0, 1, 0, 10, 0, -1, -2, -1 };
+    cout << solution(s);
     return 0;
 }
