@@ -151,6 +151,7 @@
     <ClInclude Include="수 조작하기 1.h" />
     <ClInclude Include="수 조작하기 2.h" />
     <ClInclude Include="수열과 구간 쿼리 3.h" />
+    <ClInclude Include="수열과 구간 쿼리2.h" />
     <ClInclude Include="원소들의 곱과 합.h" />
     <ClInclude Include="이어 붙인 수.h" />
     <ClInclude Include="조건 문자열.h" />

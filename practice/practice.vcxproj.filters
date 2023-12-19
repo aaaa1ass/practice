@@ -110,5 +110,8 @@
     <ClInclude Include="수열과 구간 쿼리 3.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="수열과 구간 쿼리2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
